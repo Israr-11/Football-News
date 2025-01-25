@@ -1,33 +1,18 @@
 import { Request, Response } from 'express';
 import { NewsService } from '../services/newServices';
 
-export class NewsController {
-    private newsService: NewsService;
+const newsService = new NewsService();
 
-    constructor() {
-        this.newsService = new NewsService();
-    }
-
-    async getAllNews(req: Request, res: Response): Promise<void> {
-        try {
-            const articles = await this.newsService.fetchAllNews();
-            res.status(200).json(articles);
-        } catch (error) {
-            res.status(500).json({ error: 'Failed to fetch news' });
+export const fetchAndStoreNews = async (req: Request, res: Response): Promise<void> => {
+    try {
+        const { sources } = req.body;
+        const articles = await newsService.fetchAndStoreNewsBySource(sources);
+        res.status(200).json(articles);
+    } catch (error) {
+        if (error instanceof Error && error.message === 'No valid news sources provided') {
+            res.status(400).json({ error: error.message });
+        } else {
+            res.status(500).json({ error: 'Failed to fetch and store news' });
         }
     }
-
-    async getNewsBySource(req: Request, res: Response): Promise<void> {
-        try {
-            const sourceId = req.params.informationId;
-            const articles = await this.newsService.fetchNewsBySource(sourceId);
-            res.status(200).json(articles);
-        } catch (error) {
-            if (error instanceof Error && error.message === 'News source not found') {
-                res.status(404).json({ error: error.message });
-            } else {
-                res.status(500).json({ error: 'Failed to fetch news' });
-            }
-        }
-    }
-}
+};
