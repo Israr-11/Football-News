@@ -7,7 +7,7 @@ API that is built using Node js used to fetch Football related news from all the
 
 ## Step 1: Install dependencies
 
-Installation:
+Installation
 
 npm install
 
