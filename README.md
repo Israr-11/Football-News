@@ -1,7 +1,7 @@
 ![image](https://github.com/user-attachments/assets/6126a2e6-9fe1-4c47-9cf4-ea75d628cd81)
 
 
-API that is built using Node js used to fetch Football related news from all the top news websites of the world based on what users actually want 
+API that is built using Node js used to fetch Football related news from all the top news websites of the world based on what users want 
 
 ## `Follow these instructions to run the API successfully`
 
