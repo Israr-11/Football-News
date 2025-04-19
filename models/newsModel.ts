@@ -8,11 +8,13 @@ const NewsSchema = new Schema({
         type: String,
         required: true
     },
+    
     url: {
         type: String,
         required: true,
         unique: true
     },
+    
     source: {
         type: String,
         required: true
