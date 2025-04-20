@@ -4,6 +4,7 @@ export interface Article {
     url: string;
     source: string;
 }
+
 export interface Information {
     name: string;
     address: string;
