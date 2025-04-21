@@ -5,6 +5,7 @@ import { News } from '../models/newsModel';
 import { VALID_NEWS_SOURCES, NEWS_SOURCES_INFO } from '../utils/newsResources';
 
 export class NewsService {
+    
     async fetchAndStoreNewsBySource(sources: string[]): Promise<Article[]> {
         const validSources = NEWS_SOURCES_INFO.filter(info => 
             sources.includes(info.name) && VALID_NEWS_SOURCES.includes(info.name)
