@@ -6,7 +6,9 @@ export interface Article {
 }
 
 export interface Information {
+    
     name: string;
     address: string;
     base?: string;
+
 }
