@@ -4,6 +4,7 @@ import { NewsService } from '../services/newServices';
 const newsService = new NewsService();
 
 export const fetchAndStoreNews = async (req: Request, res: Response): Promise<void> => {
+
     try {
         const { sources } = req.body;
         const articles = await newsService.fetchAndStoreNewsBySource(sources);
