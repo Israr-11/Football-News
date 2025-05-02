@@ -4,7 +4,7 @@ export const VALID_NEWS_SOURCES = [
     'SkySports',
     // 'espn',
     // 'marca',
-    // 'as'
+
 ];
 
 export const NEWS_SOURCES_INFO = [
