@@ -1,4 +1,5 @@
 import mongoose, { Schema, Document } from 'mongoose';
+
 import { Article } from '../interfaces/index';
 
 export interface NewsDocument extends Article, Document { }
