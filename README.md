@@ -12,7 +12,7 @@ npm install
 
 ## Step 2: Create a database and collection in MongoDB
 
-Create the database and collection in MongoDB, and refer them to .env file
+Create the database and collection in MongoDB, and refer them to the .env file
 
 ## Step 3: Start the backend server
 
