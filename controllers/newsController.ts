@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import { NewsService } from '../services/newServices';
 
+
 const newsService = new NewsService();
 
 export const fetchAndStoreNews = async (req: Request, res: Response): Promise<void> => {
