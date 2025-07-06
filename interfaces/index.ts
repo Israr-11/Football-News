@@ -1,5 +1,6 @@
 
-export interface Article {
+export interface Article 
+{
     
     title: string;
     url: string;
