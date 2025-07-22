@@ -8,7 +8,6 @@ export interface Article
 }
 
 //Ensuring type safety for information.
-
 export interface Information {
     
     name: string;
