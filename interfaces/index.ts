@@ -6,7 +6,7 @@ export interface Article
     source: string;
 }
 
-//Ensuring type safety for information.
+// Ensuring type safety for information.
 export interface Information {
     
     name: string;
