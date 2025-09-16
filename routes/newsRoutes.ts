@@ -1,5 +1,4 @@
 import { Router } from 'express';
-
 import {fetchAndStoreNews} from '../controllers/newsController';
 
 const router = Router();
