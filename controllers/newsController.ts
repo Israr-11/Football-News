@@ -1,4 +1,3 @@
-
 import { Request, Response } from 'express';
 import { NewsService } from '../services/newServices';
 const newsService = new NewsService();
